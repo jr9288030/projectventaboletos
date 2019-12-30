@@ -1,2 +1,7 @@
 10|jjjj|jjjj|mpabad|kjkjkj
 10|jjjj|jjjj|mpabad|1234
+12345|jorge|cruz||
+34|roberto|royer||
+34|joel|rodri|jr|34
+45|edgar|colta||
+45|jose|colta||

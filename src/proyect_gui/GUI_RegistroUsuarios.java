@@ -319,9 +319,14 @@ public class GUI_RegistroUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_u_nuevoActionPerformed
 
     private void btn_u_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_u_eliminarActionPerformed
-       
+     
+        int eli=tabla_registro.getSelectedRow();
+        if (eli>=0){
+            model.removeRow(eli);
+        }else{
+            JOptionPane.showMessageDialog(null, "No hay registros para eliminar");
 
-        
+        }  
     }//GEN-LAST:event_btn_u_eliminarActionPerformed
 
     private void btn_u_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_u_editarActionPerformed

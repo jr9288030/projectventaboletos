@@ -164,12 +164,18 @@
     <Component class="javax.swing.JTextField" name="txt_p_nombre">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_p_apellido">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_p_apellidoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_p_cedula">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_p_edad">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_p_pasajero">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_p_pasajeroActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

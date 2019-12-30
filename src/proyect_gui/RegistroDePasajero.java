@@ -60,6 +60,18 @@ public class RegistroDePasajero extends javax.swing.JFrame {
 
         jLabel5.setText("Pasajero");
 
+        txt_p_apellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_p_apellidoActionPerformed(evt);
+            }
+        });
+
+        txt_p_pasajero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_p_pasajeroActionPerformed(evt);
+            }
+        });
+
         table_pasajero.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -248,6 +260,14 @@ public class RegistroDePasajero extends javax.swing.JFrame {
         table_pasajero.setModel(metodos.listaPasajero());
         
     }//GEN-LAST:event_btn_p_mostarActionPerformed
+
+    private void txt_p_pasajeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_p_pasajeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_p_pasajeroActionPerformed
+
+    private void txt_p_apellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_p_apellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_p_apellidoActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_p_guardar;

@@ -68,6 +68,18 @@ public class GUI_RegistroPasajeros extends javax.swing.JFrame {
 
         jLabel5.setText("Tipo Pasajero");
 
+        txt_p_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_p_nombreActionPerformed(evt);
+            }
+        });
+
+        txt_p_edad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_p_edadActionPerformed(evt);
+            }
+        });
+
         table_pasajero.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -287,6 +299,14 @@ public class GUI_RegistroPasajeros extends javax.swing.JFrame {
         // Carga los datos del archivo de texto con la base de datos de pasajeros:
         table_pasajero.setModel(metodos.listaPasajero());
     }//GEN-LAST:event_btn_p_actializarActionPerformed
+
+    private void txt_p_edadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_p_edadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_p_edadActionPerformed
+
+    private void txt_p_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_p_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_p_nombreActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_p_actializar;

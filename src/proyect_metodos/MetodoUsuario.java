@@ -95,10 +95,11 @@ public class MetodoUsuario {
     }
     
     
-    public void EliminarRutas() {
+    public void EliminarUsuario() {
            
-        //FALTA
+        
     }
+    
   
 }
 
