@@ -193,11 +193,11 @@ public class RegistroDeUsuarios extends javax.swing.JFrame {
 
     private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
         // accion Boton eliminar:
-        int eli=tabla_registro.getSelectedRow();
-        if (eli>=0){
-            model.removeRow(eli);
+        int FilaSelec= tabla_registro.getSelectedRow();
+        if (FilaSelec>=0){
+            model.removeRow(FilaSelec);
         }else{
-            JOptionPane.showMessageDialog(null, "No hay registros para eliminar");
+            JOptionPane.showMessageDialog(this, "No hay registros para eliminar");
         }
     }//GEN-LAST:event_btn_eliminarActionPerformed
 

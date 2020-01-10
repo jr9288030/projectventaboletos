@@ -12,7 +12,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import proyect_clases.Boleto;
 import proyect_clases.Rutas;
-
+import java.util.ArrayList;
+import java.io.File;
 public class MetodoRutas {
     
     Vector vPrincipal = new Vector();
@@ -93,14 +94,41 @@ public class MetodoRutas {
         return vPrincipal;
     }
     
-    public void EditarRutas() {
-           
+    public void EditarRutas(ArrayList lista) {
+          FileWriter flwriter = null;
+		try { 
+			flwriter = new FileWriter(".Rutas.txt");
+			BufferedWriter bfwriter = new BufferedWriter(flwriter);
+			for (Rutas rutas : lista) {
+				//escribe los datos en el archivo
+				bfwriter.write(rutas.getId_Ruta() + "," +rutas.getCosto_Ruta()+","+rutas.getHora_Ruta()+","+rutas.getFecha_Ruta()+","+ rutas.getNombre_Ruta() + "," + rutas.getOrigen_Ruta()
+						+ "," + rutas.getDestino_Ruta() + "\n");
+			}
+			bfwriter.close();
+			System.out.println("Archivo modificado satisfactoriamente..");
+ 
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (flwriter != null) {
+				try {
+					flwriter.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				} 
         //FALTA
     }
     
     
-    public void EliminarRutas() {
-           
+    public void eliminarRutas (String eliminarRutas) {
+
+     File fichero = new File(rutas);
+   
+     if(fichero.delete()){
+
+          System.out.println("Rutas eliminadas");
+    
+          }
         //FALTA
     }
     

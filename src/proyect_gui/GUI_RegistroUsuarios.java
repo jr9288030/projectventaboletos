@@ -19,6 +19,8 @@ public class GUI_RegistroUsuarios extends javax.swing.JFrame {
     DefaultTableModel mdlTablaU;
     Vector vCabeceras = new Vector();
     Vector v = new Vector();
+    private Object tabla_registro;
+    private Object model;
     
     public GUI_RegistroUsuarios() {
         initComponents();
@@ -319,13 +321,12 @@ public class GUI_RegistroUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_u_nuevoActionPerformed
 
     private void btn_u_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_u_eliminarActionPerformed
-     
-        int eli=tabla_registro.getSelectedRow();
-        if (eli>=0){
-            model.removeRow(eli);
+     int FilaSelec= tabla_registro.getSelectedRow();
+        if (FilaSelec>=0){
+            model.removeRow(FilaSelec);
         }else{
-            JOptionPane.showMessageDialog(null, "No hay registros para eliminar");
-
+            JOptionPane.showMessageDialog(this, "No hay registros para eliminar");
+        
         }  
     }//GEN-LAST:event_btn_u_eliminarActionPerformed
 
@@ -370,6 +371,7 @@ public class GUI_RegistroUsuarios extends javax.swing.JFrame {
             }
         });
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_u_editar;

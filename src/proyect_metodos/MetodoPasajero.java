@@ -8,6 +8,13 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import proyect_clases.Pasajero;
+import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class MetodoPasajero {
     
@@ -93,14 +100,48 @@ public class MetodoPasajero {
         return vPrincipal;
     }
     
-    public void EditaPasajero(){
-    
+    public void editarPasajero(ArrayList lista){
+          FileWriter flwriter = null;
+		try { 
+			flwriter = new FileWriter("C:Pasajero.txt", true);
+			BufferedWriter bfwriter = new BufferedWriter(flwriter);
+			for (Pasajero pasajero : lista) {
+				//escribe los datos en el archivo
+				bfwriter.write(pasajero.getNombre_pasajero() + "," +pasajero.getEdad_pasajero()+","+pasajero.getCedula_pasajero()+","+ pasajero.getApellido_pasajero() + "," + pasajero.getTipo_pasajero()
+						+ "," + pasajero.getId_pasajero() + "\n");
+			}
+			bfwriter.close();
+			System.out.println("Archivo modificado satisfactoriamente..");
+ 
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (flwriter != null) {
+				try {
+					flwriter.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
         //FALTA
-    }
+                    }
+                }
     
-    public void EliminarPasajero(){
+    public void eliminarPasajero(String pasajero){
+            
+     File fichero = new File(pasajero);
+   
+     if(fichero.delete()){
+
+          System.out.println("pasajero eliminado");
     
-        //FALTA
+          }
     }
     
 }
+
+
+
+
+ 
+                   

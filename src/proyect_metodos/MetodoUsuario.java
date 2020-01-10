@@ -12,6 +12,8 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import proyect_clases.Usuario;
+import java.io.File;
+import java.util.ArrayList;
 
 public class MetodoUsuario {
     
@@ -89,18 +91,51 @@ public class MetodoUsuario {
         return v1;
     }
     
-      public void EditarRutas() {
+      public void EditarUsuario( ArrayList lista) {
+          FileWriter flwriter = null;
+		try { 
+			flwriter = new FileWriter(".Usuario.txt");
+			BufferedWriter bfwriter = new BufferedWriter(flwriter);
+			for (Usuario usuario : lista) {
+				//escribe los datos en el archivo
+				bfwriter.write(usuario.getId_usuario() + "," +usuario.getUsarname()+","+usuario.getNombre_usuario() + "," + usuario.getApellido_usuario()
+						+ "," + usuario.getPassword() + "\n");
+			}
+			bfwriter.close();
+			System.out.println("Archivo modificado satisfactoriamente..");
+ 
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (flwriter != null) {
+				try {
+					flwriter.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+    
            
         //FALTA
     }
+                
     
     
-    public void EliminarUsuario() {
-           
+    public void EliminarUsuario(String usuario) {
+
+     File fichero = new File(usuario);
+   
+     if(fichero.delete()){
+
+          System.out.println("archivo eliminado");
+    
+          }
+
+      }                    
         
     }
-    
+
   
-}
+
 
 
